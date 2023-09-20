@@ -1,0 +1,34 @@
+#mm-pg-wr form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+}
+#mm-pg-wr form [value="RUN"] {
+  background-color: darkgreen;
+  color: #fff;
+  padding: 0.3rem 0;
+  border: unset;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+#mm-pg-wr form #category {
+  position: relative;
+}
+#mm-pg-wr form #category:before {
+  content: "kkkk";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: red;
+  width: 100%;
+  height: 20px;
+  display: flex;
+}
+#mm-pg p.keterangan {
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  position: relative;
+  top: -8px;
+}

@@ -1,0 +1,210 @@
+#post-hero {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--color-light-3);
+  box-shadow: 0 0 5px var(--transparent-dark-1) inset;
+}
+#post-hero .container {
+  z-index: 2;
+}
+#post-hero:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-accent-1);
+  z-index: 0;
+  opacity: 0.6;
+}
+#post-hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to top,
+      transparent 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      transparent 50%,
+      transparent 100%
+    );
+  background-size: 2px 2px;
+
+  /* Vendor prefixes */
+  -webkit-background-image: -webkit-linear-gradient(
+      to top,
+      transparent 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    -webkit-linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1)
+          50%, transparent 50%, transparent 100%);
+  -moz-background-image: -moz-linear-gradient(
+      to top,
+      transparent 0%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    -moz-linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, transparent
+          50%, transparent 100%);
+}
+
+#post-hero-wr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.col {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#ph-right {
+  box-shadow: 0 0 1rem var(--transparent-dark-3);
+  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+#ph-right img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/**
+=========================
+* Post Content
+*=========================
+*/
+#pc {
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+  background-color: aliceblue;
+}
+
+#pc .container {
+  width: 768px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: var(--color-light-1);
+  margin-top: -10rem;
+  padding: 2rem;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 0.3rem var(--transparent-dark-1);
+}
+#pc-wr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#the-content {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+#the-content img {
+  width: 100%;
+  height: auto;
+}
+
+#photgal-wr {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 1rem;
+}
+
+.photgal-item {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.photgal-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/**
+=========================
+* Share
+*=========================
+*/
+.share {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.share::before {
+  content: "Share";
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  position: absolute;
+  top: -2rem;
+  left: 1rem;
+}
+
+.share a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-light-1);
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.share a i {
+  transform: translateY(0);
+  transition: 0.3s ease all;
+}
+
+.share a:hover i {
+  transform: translateY(-7px);
+  transition: 0.3s ease all;
+}
+
+/**
+=========================
+* Media Queries
+*=========================
+*/
+
+@media screen and (max-width: 1024px) {
+  #photgal-wr {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #post-hero-wr {
+    grid-template-columns: 1fr;
+  }
+  #photgal-wr {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

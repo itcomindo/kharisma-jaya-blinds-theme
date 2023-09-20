@@ -1,0 +1,19 @@
+// jQuery
+jQuery(document).ready(function(){
+    jQuery("#mm_show_form_btn").click(function(){
+        jQuery("#mm_form_popup").show();
+    });
+    
+    jQuery("#nama, #no_telp, #email").on('input', function(){
+        if(jQuery("#nama").val() && jQuery("#no_telp").val() && jQuery("#email").val()) {
+            jQuery("#mm_send_btn").removeAttr("disabled");
+        } else {
+            jQuery("#mm_send_btn").attr("disabled", "disabled");
+        }
+    });
+    
+    jQuery("#mm_formulir").submit(function(e){
+        e.preventDefault();
+        // Logic untuk menyimpan data ke CPT dan mendownload file
+    });
+});
