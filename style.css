@@ -15,7 +15,7 @@
 *=========================
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mulish:wght@200;400;500;600;700;800;900;1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Mulish:wght@200;400;500;600;700;800;900;1000&display=swap");
 
 /*
 * Name: Root
@@ -54,7 +54,7 @@
   /* Fonts */
   --font-primary: "Mulish", sans-serif;
   --font-display: "Bebas Neue", cursive;
-  --font-writing: "Bebas Neue", cursive;
+  --font-writing: "Great Vibes", cursive;
   /* coloring */
   --color-light-1: #ffffff;
   --color-light-2: #e2eeec;
@@ -269,7 +269,9 @@ a.linkedin {
   background: linear-gradient(to bottom, #0077b5, #00405d);
   color: white;
 }
-
+.uppercase {
+  text-transform: uppercase;
+}
 /**
 =========================
 * Topbar
@@ -529,7 +531,7 @@ a.prod-card-btn {
 }
 .the-7 {
   grid-column: 1 / span 6;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -813,6 +815,56 @@ ul#footer-menu-list li a {
   position: absolute;
   top: calc(-1rem - (25px / 2));
 }
+
+/**
+=========================
+* ADS
+*=========================
+*/
+.the-ads {
+  border-radius: 10px;
+  box-shadow: 0 0 1rem var(--transparent-dark-3);
+}
+.the-ads:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 400px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--transparent-light-1),
+    transparent 1rem,
+    var(--transparent-light-2) 1rem,
+    var(--transparent-light-1) 20px
+  );
+  transform: rotate(-15deg);
+}
+.the-ads:after {
+  content: "\f218";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 4rem;
+  color: var(--color-light-3);
+  position: absolute;
+  top: -100px;
+  right: 0;
+  padding-top: 100px;
+  width: 300px;
+  height: 300px;
+  background-color: var(--transparent-light-1);
+  border-radius: 50%;
+  transform: rotate(15deg);
+  box-shadow: -5px 0 1rem var(--transparent-light-1);
+}
+.the-ads .ads-content {
+  font-size: 13px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
 /**
 =========================
 * Media Query
@@ -829,6 +881,30 @@ ul#footer-menu-list li a {
     margin-top: unset;
     margin-bottom: unset;
     justify-content: center;
+  }
+  .the-ads:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -40%;
+    width: 90%;
+    height: 75%;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--transparent-light-1),
+      transparent 1rem,
+      var(--transparent-light-2) 1rem,
+      var(--transparent-light-1) 20px
+    );
+    transform: rotate(-15deg);
+  }
+  .the-ads:after {
+    font-size: 2rem;
+    width: 80px;
+    height: 80px;
+    top: unset;
+    bottom: -40px;
+    padding-top: unset;
   }
 }
 
@@ -911,6 +987,9 @@ ul#footer-menu-list li a {
   }
   .lw75-mw100 {
     width: 100%;
+  }
+  #prod-card-wr .ads-head {
+    font-size: 0.8rem;
   }
 }
 

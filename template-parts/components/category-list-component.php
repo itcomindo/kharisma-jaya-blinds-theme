@@ -19,7 +19,7 @@ defined('ABSPATH') || exit;
     $categories = get_categories();
     echo '<ul>';
     foreach ($categories as $category) {
-        echo '<li class="' . $category->slug . '"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
+        echo '<li class="' . $category->slug . '"><a href="' . get_category_link($category->term_id) . '" title="' . $category->name . '">' . $category->name . '</a></li>';
     }
     echo '</ul>';
     ?>

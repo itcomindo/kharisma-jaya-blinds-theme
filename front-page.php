@@ -16,6 +16,7 @@ get_template_part('template-parts/sections/features-section');
 get_template_part('template-parts/sections/testimonials-section');
 get_template_part('template-parts/sections/logo-customer-section');
 get_template_part('template-parts/sections/cta-section');
+get_template_part('template-parts/sections/content-section');
 // get_template_part('template-parts/sections/faq-section');
 
 
